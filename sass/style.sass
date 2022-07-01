@@ -55,6 +55,7 @@
             padding-left: 2.5rem
             color: $dark-grayish-red
             font-family: "Josefin Sans"
+            font-weight: 600
 
             &:focus
                 outline: none
@@ -93,7 +94,7 @@
 
 
 
-        #error-container
+        #error-container, #success-container
             @include set-position(absolute,0,0)
             @include width-height(31.1rem, 4.8rem)
             @include flexbox(row, space-between, center)
@@ -115,6 +116,14 @@
                 top: 50%
                 right: 7.4rem
                 transform: translateY(-50%)
+
+        #success-container
+            display: none
+            border-color: green
+
+            p
+                color: green
+
 
 footer
     margin: 3.5rem 0 3.5rem 0
@@ -175,6 +184,7 @@ footer
 
             input
                 border-radius: 2.8rem
+                font-size: 1.7rem
 
                 &::placeholder
                     font-size: 1.6rem
@@ -186,7 +196,7 @@ footer
             #icon-arrow
                 right: 5rem
 
-            #error-container
+            #error-container, #success-container
                 @include width-height(44.5rem, 5.6rem)
                 border-radius: 2.8rem
  
@@ -196,6 +206,7 @@ footer
 
                 .icon-error
                     right: 11rem
+
     footer
         @include set-position(absolute, 96%,undefined, 20%)
         margin: 0

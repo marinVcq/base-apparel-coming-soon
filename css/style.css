@@ -102,7 +102,8 @@ a {
       background-color: transparent;
       padding-left: 2.5rem;
       color: #413a3a;
-      font-family: "Josefin Sans"; }
+      font-family: "Josefin Sans";
+      font-weight: 600; }
       .main-container #form-container input:focus {
         outline: none; }
       .main-container #form-container input::placeholder {
@@ -136,7 +137,7 @@ a {
       top: 50%;
       right: 3.2rem;
       transform: translate(50%, -50%); }
-    .main-container #form-container #error-container {
+    .main-container #form-container #error-container, .main-container #form-container #success-container {
       position: absolute;
       top: 0;
       left: 0;
@@ -153,7 +154,7 @@ a {
       border: 0.1rem solid #f96262;
       background-color: transparent;
       display: none; }
-      .main-container #form-container #error-container p {
+      .main-container #form-container #error-container p, .main-container #form-container #success-container p {
         position: absolute;
         top: 5.3rem;
         left: 0;
@@ -163,11 +164,16 @@ a {
         font-size: 1.4rem;
         text-align: start;
         color: #f96262; }
-      .main-container #form-container #error-container .icon-error {
+      .main-container #form-container #error-container .icon-error, .main-container #form-container #success-container .icon-error {
         position: absolute;
         top: 50%;
         right: 7.4rem;
         transform: translateY(-50%); }
+    .main-container #form-container #success-container {
+      display: none;
+      border-color: green; }
+      .main-container #form-container #success-container p {
+        color: green; }
 
 footer {
   margin: 3.5rem 0 3.5rem 0; }
@@ -233,7 +239,8 @@ footer {
       height: 5.6rem;
       margin-top: 4.1rem; }
       .main-container #form-container input {
-        border-radius: 2.8rem; }
+        border-radius: 2.8rem;
+        font-size: 1.7rem; }
         .main-container #form-container input::placeholder {
           font-size: 1.6rem; }
       .main-container #form-container #button {
@@ -242,18 +249,18 @@ footer {
         border-radius: 2.8rem; }
       .main-container #form-container #icon-arrow {
         right: 5rem; }
-      .main-container #form-container #error-container {
+      .main-container #form-container #error-container, .main-container #form-container #success-container {
         width: 44.5rem;
         height: 5.6rem;
         border-radius: 2.8rem; }
-        .main-container #form-container #error-container p {
+        .main-container #form-container #error-container p, .main-container #form-container #success-container p {
           position: absolute;
           top: 6.6rem;
           left: 0;
           right: 0;
           bottom: 0;
           font-size: 1.6rem; }
-        .main-container #form-container #error-container .icon-error {
+        .main-container #form-container #error-container .icon-error, .main-container #form-container #success-container .icon-error {
           right: 11rem; }
 
   footer {
