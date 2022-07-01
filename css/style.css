@@ -107,6 +107,7 @@ a {
         font-family: "Josefin Sans";
         font-weight: bold; }
     .main-container #form-container button {
+      z-index: 2;
       position: absolute;
       top: 0;
       left: undefined;
@@ -118,6 +119,12 @@ a {
       border: none;
       box-shadow: 0px 10px 20px 4px rgba(206, 151, 151, 0.4);
       background: linear-gradient(135deg, #f8bfbf, #ee8c8c); }
+      .main-container #form-container button img {
+        z-index: 1; }
+      .main-container #form-container button:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.5s ease; }
 
 footer {
   margin: 3.5rem 0 3.5rem 0; }
@@ -192,7 +199,7 @@ footer {
   footer {
     position: absolute;
     top: 96%;
-    left: unedefined;
+    left: undefined;
     right: 20%;
     bottom: 0;
     margin: 0; }
