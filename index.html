@@ -44,7 +44,14 @@
       <input id="button" type="submit" name="submit" value=""></input>
       <img src="assets/images/icon-arrow.svg" id="icon-arrow">
 
+      <!-- Error message -->
+
       <div id="error-container"><p>Please provide a valid email</p><img src="assets/images/icon-error.svg" class="icon-error"></div>
+
+      <!-- Success message -->
+
+      <div id="success-container"><p>Thank's you are the best!</p></div>
+
 
     </form>
 
@@ -62,6 +69,7 @@
   <script type="text/javascript">
 
   var err = document.getElementById('error-container');
+  var success = document.getElementById('success-container');
   var btn = document.getElementById('button');
   var input = document.getElementById('text');
   var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -73,9 +81,10 @@
 
     if(!email.match(reg)){
       err.style.display = 'block';
-
+      success.style.display = 'none';
     }else{
       err.style.display = 'none';
+      success.style.display = 'block';
     }
   });
 
