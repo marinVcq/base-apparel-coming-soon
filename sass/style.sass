@@ -1,24 +1,26 @@
 @import base/_base.sass
 
 .logo-container
-    @include set-position(absolute, 3.2rem, 3.2rem)
+    @include set-position(absolute, -30.2rem, 0rem)
+    text-align: start
+    z-index: 2
     img
         @include width-height(10rem, 2rem)
-
-
+    
 .image-container
-
+    height: 33.4rem
     #hero-image
         @include width-height(37.5rem, 25rem)
         margin-top: 8.4rem
 
 .main-container
     @include flexbox(column, center, center)
+    text-align: center
 
     #main-title
         @include width-height(22.2rem, 11.9rem)
         margin-top: 5.6rem
-        text-align: center
+        text-align: inherit
         font-weight: 400
         font-size: 4rem
         letter-spacing: 1rem
@@ -32,7 +34,7 @@
     #main-description
         @include width-height(30.2rem, 8.5rem)
         margin-top: 3rem
-        text-align: center
+        text-align: inherit
         font-size: 1.4rem
         font-weight: 600
         line-height: 15pt
@@ -69,12 +71,73 @@
 
 footer
     margin: 3.5rem 0 3.5rem 0
+
+    .attribution
+        font-size: 1.1rem
+        text-align: center
+
+        a
+            color: hsl(228, 45%, 44%)
+
     @include respond(mobile-big-height)
         margin: 6rem 0 6rem 0
 
-.attribution
-    font-size: 1.1rem
-    text-align: center
+/* Desktop Design */
 
-    a
-        color: hsl(228, 45%, 44%)
+@include respond(desktop)
+
+    .logo-container
+        @include set-position(absolute, 6.6rem, 16.5rem)
+        img
+            @include width-height(unset,unset)
+
+    .image-container
+        @include width-height(61rem,80rem)
+        #hero-image
+            @include width-height(100%,100%)
+            content: url('../assets/images/hero-desktop.jpg')
+            margin-top: 0
+
+    .main-container
+        @include width-height(83rem,80rem)
+        @include flexbox(column, flex-start, flex-start)
+        padding-left: 16.5rem
+        background-image: url("../assets/images/bg-pattern-desktop.svg")
+        background-position: center
+        background-size: cover
+        text-align: start
+
+        #main-title
+            margin-top: 23rem
+            @include width-height(36.6rem, 19.1rem)
+            font-weight: 600
+            letter-spacing: 2rem
+            line-height: 7rem
+            font-size: 6.2rem
+
+        #main-description
+            @include width-height(43.6rem, 7.1rem)
+            margin-top: 3rem
+            font-size: 1.6rem
+            font-weight: 600
+            line-height: 2.6rem
+
+        #form-container
+            @include width-height(44.5rem, 5.6rem)
+            margin-top: 4.1rem
+
+            input
+                border-radius: 2.8rem
+
+            button
+                @include width-height(10rem, 5.6rem)
+                border-radius: 2.8rem
+    footer
+        @include set-position(absolute, 96%,unedefined,20%)
+        margin: 0
+
+        .attribution
+            font-size: 1.5rem
+            text-align: start
+        
+
