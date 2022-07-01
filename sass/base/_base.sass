@@ -1,0 +1,47 @@
+@import ../base/_mixins.sass
+
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap')
+
+/* Color palette */
+$desaturated-red: hsl(0, 36%, 70%)
+$soft-red: hsl(0, 93%, 68%)
+$dark-grayish-red: hsl(0, 6%, 24%)
+$white: hsl(0, 0%, 100%)
+
+/* General */
+
+*
+	box-sizing: border-box
+	position: relative
+	cursor: default
+	margin: 0
+
+html
+	@include width-height(100vw, 100vh)
+	position: relative
+	margin: 0
+	padding: 0
+	font-size: 62.5%
+
+body
+	@include flexbox(column, center, center)
+	margin: 0
+	padding: 0
+	width: 100%
+	font-family: "Josefin Sans"
+	font-weight: regular
+	font-size: 1.6rem
+	scroll-behavior: smooth
+	overflow-x: hidden
+	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))
+
+a
+	cursor: pointer
+	text-decoration: none
+
+@include respond(desktop)
+	body
+		height: 100%
+		padding-top: 0
+
