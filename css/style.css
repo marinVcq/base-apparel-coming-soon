@@ -202,8 +202,8 @@ footer {
     width: 61rem;
     height: 80rem; }
     .image-container #hero-image {
-      width: 100%;
-      height: 100%;
+      width: 61rem;
+      height: 80rem;
       content: url("../assets/images/hero-desktop.jpg");
       margin-top: 0; }
 
