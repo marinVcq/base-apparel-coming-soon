@@ -12,25 +12,43 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-<body>
+<body onload="document.form.text.focus()">
 
-  <!-- Image container section -->
+  <!-- Image container -->
+
   <section class="image-container">
     <img src="assets/images/hero-mobile.jpg" id="hero-image">
   </section>
 
   <!-- Main content container -->
+
   <main class="main-container">
 
     <!-- Logo container -->
+
     <div class="logo-container"><img src="assets/images/logo.svg"></div>
 
+    <!-- Main title -->
+
     <h1 id="main-title"><span>we're</span> coming soon</h1>
+
+    <!-- Main description -->
+
     <p id="main-description">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-    <form id="form-container">
-      <input type="email" id="email" name="email" id="field" placeholder="Email Address">
-      <button id="btn"><img src="assets/images/icon-arrow.svg" id="icon-arrow"></button>
+
+    <!-- Email form -->
+  
+    <form id="form-container" name="form" action="#">
+
+      <input type="text" id="text" name="text" placeholder="Email Address">
+      <input id="button" type="submit" name="submit" value=""></input>
+      <img src="assets/images/icon-arrow.svg" id="icon-arrow">
+
+      <div id="error-container"><p>Please provide a valid email</p><img src="assets/images/icon-error.svg" class="icon-error"></div>
+
     </form>
+
+    <!-- End main -->
   </main>
 
   <!-- Footer -->
@@ -40,5 +58,27 @@
       Coded by <a href="https://github.com/marinVcq?tab=repositories">Marinos</a>.
     </p>
   </footer>
+
+  <script type="text/javascript">
+
+  var err = document.getElementById('error-container');
+  var btn = document.getElementById('button');
+  var input = document.getElementById('text');
+  var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    let email = input.value;
+
+    if(!email.match(reg)){
+      err.style.display = 'block';
+
+    }else{
+      err.style.display = 'none';
+    }
+  });
+
+  </script>
 </body>
 </html>
