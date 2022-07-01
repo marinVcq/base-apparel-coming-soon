@@ -204,7 +204,7 @@ footer {
     .image-container #hero-image {
       width: 100%;
       height: 100%;
-      content: url("../assets/images/hero-desktop.svg");
+      content: url("../assets/images/hero-desktop.jpg");
       margin-top: 0; }
 
   .main-container {
