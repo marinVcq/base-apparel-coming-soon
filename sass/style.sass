@@ -3,7 +3,6 @@
 .logo-container
     @include set-position(absolute, -30.2rem, 0rem)
     text-align: start
-    z-index: 2
     img
         @include width-height(10rem, 2rem)
     
@@ -47,7 +46,7 @@
 
 
         input
-            z-index: 2
+            z-index: 1
             @include width-height(100%,100%)
             border-radius: 2.3rem
             border: 0.1rem solid rgba(206, 151, 151, 0.5)
@@ -60,7 +59,6 @@
             &:focus
                 outline: none
 
-
             &::placeholder
                 opacity: 0.5
                 color: $desaturated-red
@@ -69,30 +67,18 @@
                 font-weight: bold
 
         #button
-            background: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%))
             z-index: 2
+            background: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%))
             @include set-position(absolute, 0,undefined,0)
             @include width-height(6.4rem, 4.8rem)
             border-radius: 2.3rem
             border: none
             box-shadow: 0px 10px 20px 4px rgba(206, 151, 151, 0.4)
 
-            img
-                z-index: 1
-            
             &:hover
                 cursor: pointer
                 opacity: 0.7
                 transition: 0.5s ease
-
-        #icon-arrow
-            z-index: 2
-            position: absolute
-            top: 50%
-            right: 3.2rem
-            transform: translate(50%,-50%)
-
-
 
         #error-container, #success-container
             @include set-position(absolute,0,0)
@@ -123,7 +109,6 @@
 
             p
                 color: green
-
 
 footer
     margin: 3.5rem 0 3.5rem 0
@@ -192,9 +177,6 @@ footer
             #button
                 @include width-height(10rem, 5.6rem)
                 border-radius: 2.8rem
-
-            #icon-arrow
-                right: 5rem
 
             #error-container, #success-container
                 @include width-height(44.5rem, 5.6rem)
