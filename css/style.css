@@ -124,6 +124,8 @@ a {
       border-radius: 2.3rem;
       border: none;
       box-shadow: 0px 10px 20px 4px rgba(206, 151, 151, 0.4); }
+      .main-container #form-container #button img {
+        cursor: pointer; }
       .main-container #form-container #button:hover {
         cursor: pointer;
         opacity: 0.7;
