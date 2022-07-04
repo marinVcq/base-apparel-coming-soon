@@ -52,11 +52,15 @@ a {
     height: 2rem; }
 
 .image-container {
-  height: 33.4rem; }
-  .image-container #hero-image {
-    width: 37.5rem;
-    height: 25rem;
-    margin-top: 8.4rem; }
+  width: 37.5rem;
+  height: 25rem;
+  min-width: 37.5rem;
+  min-height: 100%;
+  background-image: url("../assets/images/hero-mobile.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 8.4rem; }
 
 .main-container {
   display: flex;
@@ -193,12 +197,11 @@ footer {
 
   .image-container {
     width: 61rem;
-    height: 80rem; }
-    .image-container #hero-image {
-      width: 61rem;
-      height: 80rem;
-      content: url("../assets/images/hero-desktop.jpg");
-      margin-top: 0; }
+    height: 83rem;
+    min-width: 61rem;
+    min-height: 100%;
+    background-image: url("../assets/images/hero-desktop.jpg");
+    margin: 0; }
 
   .main-container {
     width: 83rem;

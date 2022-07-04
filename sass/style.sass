@@ -7,10 +7,14 @@
         @include width-height(10rem, 2rem)
     
 .image-container
-    height: 33.4rem
-    #hero-image
-        @include width-height(37.5rem, 25rem)
-        margin-top: 8.4rem
+    @include width-height(37.5rem, 25rem)
+    min-width: 37.5rem
+    min-height: 100%
+    background-image: url("../assets/images/hero-mobile.jpg")
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
+    margin-top: 8.4rem  
 
 .main-container
     @include flexbox(column, center, center)
@@ -136,11 +140,11 @@ footer
             @include width-height(unset,unset)
 
     .image-container
-        @include width-height(61rem,80rem)
-        #hero-image
-            @include width-height(61rem,80rem)
-            content: url('../assets/images/hero-desktop.jpg')
-            margin-top: 0
+        @include width-height(61rem, 83rem)
+        min-width: 61rem
+        min-height: 100%
+        background-image: url("../assets/images/hero-desktop.jpg")
+        margin: 0
 
     .main-container
         @include width-height(83rem,80rem)
